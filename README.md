@@ -1,8 +1,4 @@
-# PlantTech report
-__Carlos Leon__
-
-
-## Elevator Pitch
+# Machine learning project process
 
 This project aims to show the process of two things: the construction of a machine learning model to explain a client dataset, and the reduction the number of features the client will need to take care of.
 
