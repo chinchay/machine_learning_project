@@ -11,9 +11,13 @@ This project aims to show the process of two things: the construction of a machi
 The file `assignment.csv` contains collected information of 24 features named as `par_0`, `par_1`, ..., and the target `y`. Missing values and normalization procedures can be applied through a pipeline. 
 
 ![](plots_par_012y.png)
-__Fig.1__ Scatter plot of the first 3 features and the target.  Strong colors shows a higher density distribution. Diagonal plots display histograms
+
+<p align=left>
+<b>Figure 1. </b> Scatter plot of the first 3 features and the target.  Strong colors shows a higher density distribution. Diagonal plots display histograms
+</p>
 
 Fig.1 exhibits some correlation between `par_0` and `y`, but poor correlation between `par_` features (a scatter plot between all the targets is attached, see `scatter.png`). Therefore, features can be approximated as independent parameters. A more detailed answer on the correlation between features and target is shown in Table 1.
+
 
 |            | correlation  |
 |-----------:|:-------------|
@@ -26,7 +30,11 @@ Fig.1 exhibits some correlation between `par_0` and `y`, but poor correlation be
 |  `par_20`  | 0.06         |
 |  `par_11`  | 0.03         |
 
-__Table 1__. Absolute values of the correlation between target and parameters
+
+<p align=left>
+<b>Table 1</b>. Absolute values of the correlation between target and parameters
+</p>
+
 
 From Table 1, `par_4, 12, 8, 16` and `0` are the five features that contribute the most to the target. The entire correlation matrix is shown in the file `runMe.ipynb` and it shows the feature independence mentioned before (very low values of correlation between parameters).
 
@@ -41,7 +49,11 @@ __RMSE values__
 |  polynomial terms | --          | 0.015            |
 |  random forest    | 0.007       | 0.006            |
 
-__Table 2__. RMSE values for the chosen ML models. Linear regressor models were tested with manipulated input containing only linear terms or 5th-degree polynomial terms.
+
+<p align=left>
+<b>Table 2</b>. RMSE values for the chosen ML models. Linear regressor models were tested with manipulated input containing only linear terms or 5th-degree polynomial terms.
+</p>
+
 
 To obtain the RMSE values shown in Table 2, models were tested for a small subset of the training set (a more complex procedure would involve cross-validation). This process allows us to choose the best model for which the validation test will be employed: random forest (expensive: 2 min) and/or linear regressor for 5th-degree polynomials (cheap: seconds). Default scikit-learn parameters were used for the random forest regressors. Here, a grid search cross-validation was also performed, but without significant improvement on the RMSE value.
 
@@ -57,10 +69,17 @@ __RMSE values__
 |  polynomial terms | 0.0286     |
 |  random forest    | 0.0295     |
 
-__Table 3__. Linear regressor with polinomial terms vs random forest RMSE values for the validation test
+
+<p align=left>
+<b>Table 3</b>. Linear regressor with polinomial terms vs random forest RMSE values for the validation test
+</p>
 
 ![](poly_validation.png)
-__Fig 2__. Prediction vs target relationship for the validation test
+
+
+<p align=left>
+<b>Figure 2</b>. Prediction vs target relationship for the validation test
+</p>
 
 
 ## Conclusions
